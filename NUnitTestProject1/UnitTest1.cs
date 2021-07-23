@@ -3,6 +3,7 @@ using System;
 using System.Diagnostics;
 using System.Linq;
 using System.Net;
+using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
 namespace NUnitTestProject1
@@ -17,36 +18,36 @@ namespace NUnitTestProject1
         [Test]
         public void Test1()
         {
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://demo.macroscop.com:8080/command?type=gettime&login=root&password=");
-            bool result = true;
+            string c;
+            bool result=true;
+            using (var wc = new WebClient())
+            {
+                c = wc.DownloadString("http://demo.macroscop.com:8080/command?type=gettime&login=root&password=");
+            }
 
-            Stopwatch timer = new Stopwatch();
-            timer.Start();
-
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-            
-            timer.Stop();
-
-            TimeSpan timeTaken = timer.Elapsed;
-            if (timeTaken.Seconds < 15) result = true;
+            Regex x = new Regex(@"\d\d?\:\d\d\:\d\d\s?");
+            Match m = x.Match(c);
+            DateTime time =  DateTime.Parse(m.ToString());
+            var second = DateTime.Now.Second - time.Second;
+            if (second<15) result = true;
             else result = false;
             Assert.IsTrue(result,"false");
         }
         [Test]
         public void Test2()
         {
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://demo.macroscop.com:8080/command?type=gettime&login=root&password=&responsetype=json");
+            string c;
             bool result = true;
+            using (var wc = new WebClient())
+            {
+                c = wc.DownloadString("http://demo.macroscop.com:8080/command?type=gettime&login=root&password=&responsetype=json");
+            }
 
-            Stopwatch timer = new Stopwatch();
-            timer.Start();
-
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-
-            timer.Stop();
-
-            TimeSpan timeTaken = timer.Elapsed;
-            if (timeTaken.Seconds < 15) result = true;
+            Regex x = new Regex(@"\d\d?\:\d\d\:\d\d\s?");
+            Match m = x.Match(c);
+            DateTime time = DateTime.Parse(m.ToString());
+            var second = DateTime.Now.Second - time.Second;
+            if (second < 15) result = true;
             else result = false;
             Assert.IsTrue(result, "false");
         }

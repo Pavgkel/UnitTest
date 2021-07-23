@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="4a48685e-9a17-4f0e-8c0f-dff961f23f13" name="pawel@LAPTOP-63R9VPOO 2021-07-23 22:07:41" runUser="LAPTOP-63R9VPOO\pawel" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2021-07-23T22:07:41.2346637+05:00" queuing="2021-07-23T22:07:41.2346670+05:00" start="2021-07-23T22:07:37.0438746+05:00" finish="2021-07-23T22:07:41.6037567+05:00" />
+  <TestSettings name="default" id="49e629d7-3079-442c-a7d6-a43ed090495a">
+    <Deployment runDeploymentRoot="pawel_LAPTOP-63R9VPOO_2021-07-23_22_07_41" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="bc62fbdd-fb58-4a44-94c3-e1a556cd6cdb" testId="fe91070c-e227-251d-eb57-d200a6fdc003" testName="Test2" computerName="LAPTOP-63R9VPOO" duration="00:00:00.1825810" startTime="2021-07-23T22:07:40.0000000+05:00" endTime="2021-07-23T22:07:40.0000000+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bc62fbdd-fb58-4a44-94c3-e1a556cd6cdb" />
+    <UnitTestResult executionId="6c0cf70c-d769-4dc9-95a6-14285498bfc2" testId="1dafb8f1-dda5-e067-eee4-1a816f2c2e95" testName="Test1" computerName="LAPTOP-63R9VPOO" duration="00:00:00.4061580" startTime="2021-07-23T22:07:40.0000000+05:00" endTime="2021-07-23T22:07:40.0000000+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6c0cf70c-d769-4dc9-95a6-14285498bfc2" />
+    <UnitTestResult executionId="759b4e86-e509-4c56-8740-66accd0ebcc8" testId="7f82ddc3-4e6a-6980-bd93-50a03ba314e6" testName="Test3" computerName="LAPTOP-63R9VPOO" duration="00:00:00.6282860" startTime="2021-07-23T22:07:40.0000000+05:00" endTime="2021-07-23T22:07:41.0000000+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="759b4e86-e509-4c56-8740-66accd0ebcc8">
+      <Output>
+        <ErrorInfo>
+          <Message>  false&#xD;
+  Expected: True&#xD;
+  But was:  False&#xD;
+</Message>
+          <StackTrace>   at NUnitTestProject1.Tests.Test3() in C:\Users\pawel\Downloads\тест\NUnitTestProject1\NUnitTestProject1\UnitTest1.cs:line 69&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Test1" storage="c:\users\pawel\downloads\тест\nunittestproject1\nunittestproject1\bin\debug\net5.0\nunittestproject1.dll" id="1dafb8f1-dda5-e067-eee4-1a816f2c2e95">
+      <Execution id="6c0cf70c-d769-4dc9-95a6-14285498bfc2" />
+      <TestMethod codeBase="C:\Users\pawel\Downloads\тест\NUnitTestProject1\NUnitTestProject1\bin\Debug\net5.0\NUnitTestProject1.dll" adapterTypeName="executor://nunit3testexecutor/" className="NUnitTestProject1.Tests" name="Test1" />
+    </UnitTest>
+    <UnitTest name="Test2" storage="c:\users\pawel\downloads\тест\nunittestproject1\nunittestproject1\bin\debug\net5.0\nunittestproject1.dll" id="fe91070c-e227-251d-eb57-d200a6fdc003">
+      <Execution id="bc62fbdd-fb58-4a44-94c3-e1a556cd6cdb" />
+      <TestMethod codeBase="C:\Users\pawel\Downloads\тест\NUnitTestProject1\NUnitTestProject1\bin\Debug\net5.0\NUnitTestProject1.dll" adapterTypeName="executor://nunit3testexecutor/" className="NUnitTestProject1.Tests" name="Test2" />
+    </UnitTest>
+    <UnitTest name="Test3" storage="c:\users\pawel\downloads\тест\nunittestproject1\nunittestproject1\bin\debug\net5.0\nunittestproject1.dll" id="7f82ddc3-4e6a-6980-bd93-50a03ba314e6">
+      <Execution id="759b4e86-e509-4c56-8740-66accd0ebcc8" />
+      <TestMethod codeBase="C:\Users\pawel\Downloads\тест\NUnitTestProject1\NUnitTestProject1\bin\Debug\net5.0\NUnitTestProject1.dll" adapterTypeName="executor://nunit3testexecutor/" className="NUnitTestProject1.Tests" name="Test3" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="fe91070c-e227-251d-eb57-d200a6fdc003" executionId="bc62fbdd-fb58-4a44-94c3-e1a556cd6cdb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1dafb8f1-dda5-e067-eee4-1a816f2c2e95" executionId="6c0cf70c-d769-4dc9-95a6-14285498bfc2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7f82ddc3-4e6a-6980-bd93-50a03ba314e6" executionId="759b4e86-e509-4c56-8740-66accd0ebcc8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Список результатов" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Все загруженные результаты" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="3" executed="3" passed="2" failed="1" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 3.16.1.0: Test execution started&#xD;
+Running all tests in C:\Users\pawel\Downloads\тест\NUnitTestProject1\NUnitTestProject1\bin\Debug\net5.0\NUnitTestProject1.dll&#xD;
+   NUnit3TestExecutor converted 3 of 3 NUnit test cases&#xD;
+NUnit Adapter 3.16.1.0: Test execution complete&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>
